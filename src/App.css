@@ -5,3 +5,14 @@
     max-width:100%;
     max-height:100%;
 }
+
+.left_view {
+    font-size: 21px;
+}
+.left_view p{
+    font-weight: 600px;
+}
+
+.left_view h3, span, p{
+    font-size:1.2vw;
+}

@@ -1,5 +1,8 @@
 import React from 'react'
 import '../App.css'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import DeleteIcon from '@mui/icons-material/Delete';
 export const Home = () => {
     return (
         <div className='mt-5'>
@@ -25,11 +28,25 @@ export const Home = () => {
                         <td>prasandeep</td>
                         <td>prsndp@gmail.com</td>
                         <td>Full Stack Engineer</td>
-                        <td>789327983</td>
+                        <td>78932798317</td>
                         <td className='d-flex justify-content-between'>
-                            <button className='btn btn-success' ><i class="fa-regular fa-eye"></i></button>
-                            <button className='btn btn-primary' ><i class="fa-regular fa-pen-to-square"></i></button>
-                            <button className='btn btn-danger' ><i class="fa-solid fa-trash"></i></button>
+                            <button className='btn btn-success' > < VisibilityIcon/> </button>
+                            <button className='btn btn-primary' > <ModeEditIcon /> </button>
+                            <button className='btn btn-danger' >< DeleteIcon /></button>
+                        </td>
+                      
+                    </tr>
+
+                    <tr  >
+                        <th scope="row">2</th>
+                        <td>prasandeep</td>
+                        <td>prsndp@gmail.com</td>
+                        <td>Full Stack Engineer</td>
+                        <td>78932798317</td>
+                        <td className='d-flex justify-content-between'>
+                        <button className='btn btn-success' > < VisibilityIcon/> </button>
+                            <button className='btn btn-primary' > <ModeEditIcon /> </button>
+                            <button className='btn btn-danger' >< DeleteIcon /></button>
                         </td>
                       
                     </tr>
