@@ -5,7 +5,7 @@ export const Home = () => {
         <div className='mt-5'>
             <div className='container'>
                 <div className='add_btn mt-2'>
-                    <button className='btn btn-primary mb-2'>Add Data</button>
+                    <button style={{ float:"right"}}  className='btn btn-primary mb-2'>Add Data</button>
                 </div>
          
             <table style={{ marginTop: "8%"}} className="table">
