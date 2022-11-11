@@ -11,7 +11,32 @@ export const Register = () => {
         work: " ",
         desc: " "
     })
-    
+    // connecting front-end with backend
+    const addinpdata = async(e)=>{
+        e.preventDefault();
+        const { name, email, age, mobile, work, add, desc} = inpval;
+        const res = await fetch('/register', {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name, email, age, mobile, work, add, desc
+            })
+        });
+        const data = await res.json();
+        console.log(data);
+        if(res.status === 422  || !data)
+        {
+            alert("Error");
+            console.log("Please Fill Data First");
+        }
+        else{
+            alert("data added!")
+            console.log("data added!");
+        }
+    }
+
     const setdata = (e) =>
     {
         console.log(e.target.value);
@@ -57,7 +82,7 @@ export const Register = () => {
                         <textarea name="desc"  value={inpval.desc} onChange={setdata}  className="form-control" id="" cols="30" rows="5"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button onClick={addinpdata} type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
